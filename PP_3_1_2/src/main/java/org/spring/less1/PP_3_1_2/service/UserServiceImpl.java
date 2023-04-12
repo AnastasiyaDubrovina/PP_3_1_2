@@ -9,15 +9,22 @@ import javax.transaction.Transactional;
 import java.util.List;
 
 @Service
-@jakarta.transaction.Transactional
+@Transactional
 public class UserServiceImpl implements UserService {
-    @Autowired
+
     UserDao userDao;
+
+    @Autowired
+    public UserServiceImpl(UserDao userDao) {
+        this.userDao = userDao;
+    }
+
     @Transactional
     @Override
     public void saveUser(User user) {
         userDao.saveUser(user);
     }
+
     @Transactional
     @Override
     public void removeUserById(Long id) {

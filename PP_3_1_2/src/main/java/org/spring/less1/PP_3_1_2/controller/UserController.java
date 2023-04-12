@@ -1,7 +1,6 @@
 package org.spring.less1.PP_3_1_2.controller;
 
 
-import jakarta.transaction.Transactional;
 import org.spring.less1.PP_3_1_2.model.User;
 import org.spring.less1.PP_3_1_2.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,9 +10,8 @@ import org.springframework.web.bind.annotation.*;
 
 
 @Controller
-@Transactional
 public class UserController {
-private UserService userService;
+    private UserService userService;
 
     @Autowired
     public UserController(UserService userService) {

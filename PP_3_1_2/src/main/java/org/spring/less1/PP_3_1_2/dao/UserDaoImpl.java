@@ -1,10 +1,9 @@
 package org.spring.less1.PP_3_1_2.dao;
 
-import jakarta.persistence.EntityManager;
-import jakarta.persistence.PersistenceContext;
 import org.spring.less1.PP_3_1_2.model.User;
 import org.springframework.stereotype.Repository;
 
+import javax.persistence.*;
 import java.util.List;
 
 
